@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="pessoa/templateAula.xhtml">
+    
+    <ui:define name="centro"> 
+        <div class="container">
+            <div class="section red-text">
+
+                    <!--   Icon Section   -->
+                    <div class="row">
+
+                        <div class="col s4 m3">
+                            
+                                <a href="./pessoa/listpessoa.xhtml" class="btn-large white-text">        
+                                    Pessoas</a>                        
+                        </div>   
+                        <div class="col s4 m3">        
+                                <a href="./pessoa/pessoa.xhtml" class="btn-large white-text">
+                                    CadastroPessoa</a>
+                         
+                        </div>
+
+                        <div class="col s4 m3">
+                                <a href="./pessoa/list.xhtml" class="btn-large white-text">        
+                                    Dependentes</a>
+                        </div>    
+                        <div class="col s4 m3">
+                                <a href="./pessoa/dependente.xhtml" class="btn-large white-text">        
+                                    CadastroDependente
+                                </a>
+                        </div>    
+   
+                    </div> 
+            </div>
+        </div>                    
+    </ui:define>      
+</ui:composition>

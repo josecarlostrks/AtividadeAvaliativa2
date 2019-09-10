@@ -1,0 +1,12 @@
+com/mycompany/qualquer/Dependentes.class
+com/mycompany/qualquer/jsf/converter/ConvertDependente.class
+com/mycompany/qualquer/jsf/converter/ConvertCPF.class
+com/mycompany/qualquer/controle/dependenteBean.class
+com/mycompany/qualquer/Pessoa.class
+com/mycompany/qualquer/Pessoas.class
+com/mycompany/qualquer/Jdbc.class
+com/mycompany/qualquer/Dependente.class
+com/mycompany/qualquer/CPF.class
+com/mycompany/qualquer/controle/UsuarioBean.class
+com/mycompany/qualquer/jsf/validator/ValidatorDependente.class
+com/mycompany/qualquer/jsf/validator/ValidatorCPF.class

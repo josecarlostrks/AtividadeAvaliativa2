@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <ui:composition template="templateAula.xhtml">
+        <ui:define name="inicio">
+        <div class="container col s12 m6">
+        <h:form id="formulario">
+          
+        <h1 class="header center teal-text text-lighten-3">Pessoas</h1>
+            <h:messages layout="list"/>
+            <h:outputLabel value="Nome: "></h:outputLabel>
+            <h:inputText id="nome" 
+                         value="#{usuarioBean.pessoa.nome}" 
+                         class="inputs"  
+                         validatorMessage="Resolva">
+                <f:convertNumber for="nome" />
+            </h:inputText>
+            <h:outputLabel value="Cpf: "></h:outputLabel>
+            <h:inputText value="#{usuarioBean.pessoa.cpf}"
+                         id="cpf" 
+                          converter="converter.cpf" 
+                         validator="validator.cpf" />
+            <h:outputLabel value="Dependente: "></h:outputLabel>
+            <h:selectOneMenu value="#{usuarioBean.dependente}" 
+                             converter="converter.Dependente"
+                             validator="validator.Dependente"                             
+                             id="dep">
+                <f:selectItems value="#{usuarioBean.listaDependentes()}"
+                               var="dep" itemLabel="#{dep.nome}" />
+            </h:selectOneMenu>
+            <br></br>             
+            <center>
+            <h:commandButton value="Salvar" action="#{usuarioBean.salvar()}"
+                             class=" center btn-large waves-effect waves-light teal lighten-1"/>                
+            <h:commandButton value="Buscar" action="#{usuarioBean.buscar()}"
+                             class=" center btn-large waves-effect waves-light teal lighten-1"/>                
+            <h:commandButton value="Buscar" action="#{usuarioBean.editar()}"
+                             class=" center btn-large waves-effect waves-light teal lighten-1"/>                
+            </center>
+
+            <br></br>                
+        </h:form>
+        </div>    
+        </ui:define>
+    </ui:composition>
+</html>
